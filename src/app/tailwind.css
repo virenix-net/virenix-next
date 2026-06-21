@@ -1,0 +1,205 @@
+@config "../../tailwind.config.js";
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    /* Primary Background Colors */
+    --primary-bg-dark: #0b0f14;
+    --primary-bg-navy: #0d1219;
+    --primary-bg-navy-alpha: #0d1219ea;
+    --primary-bg-blue-dark: #0d1a2e;
+
+    /* Secondary Background Colors */
+    --secondary-bg-blue: #185fa5;
+    --secondary-bg-teal: #1d9e75;
+    --secondary-bg-gray-alpha: #1e1e1eb2;
+    --secondary-bg-cyan: #1f73c2;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #7a9cc4;
+    --text-tertiary: #3a5a7a;
+    --text-muted: #2a4a6a;
+    --text-accent-teal: #1d9e75;
+    --text-accent-blue: #4a9eff;
+
+    /* Border Colors */
+    --border-primary: #1a2744;
+    --border-secondary: #1e3a5f;
+    --border-accent: #185fa5;
+    --border-light: #ffffff;
+
+    /* Component-Specific Colors */
+    --button-bg-primary: #185fa5;
+    --button-bg-secondary: #1f73c2;
+    --button-bg-tertiary: #0d1a2e;
+    --button-text-primary: #ffffff;
+    --button-text-secondary: #4a9eff;
+    --button-text-tertiary: #7a9cc4;
+    --button-text-muted: #3a5a7a;
+    --button-border-primary: #185fa5;
+    --button-border-secondary: #1a2744;
+    --button-border-tertiary: #1e3a5f;
+
+    --header-bg: #0d1219ea;
+
+    --footer-bg: #0d1219;
+    --footer-border: #1a2744;
+
+    --chip-bg: #0d1219;
+    --chip-text-primary: #7a9cc4;
+    --chip-text-secondary: #3a5a7a;
+    --chip-border: #1a2744;
+
+    --link-text: #3a5a7a;
+
+    --icon-button-bg: #0d1a2e;
+    --icon-button-border: #1e3a5f;
+
+    --list-border: #1a2744;
+
+    /* Typography Variables - Font Sizes */
+    --font-size-xs: 11px;
+    --font-size-sm: 12px;
+    --font-size-base: 13px;
+    --font-size-md: 14px;
+    --font-size-lg: 15px;
+    --font-size-xl: 16px;
+    --font-size-2xl: 18px;
+    --font-size-3xl: 20px;
+    --font-size-4xl: 34px;
+    --font-size-5xl: 36px;
+    --font-size-6xl: 38px;
+    --font-size-7xl: 40px;
+    --font-size-8xl: 44px;
+    --font-size-9xl: 62px;
+
+    /* Typography Variables - Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Typography Variables - Line Heights */
+    --line-height-xs: 14px;
+    --line-height-sm: 15px;
+    --line-height-base: 16px;
+    --line-height-md: 17px;
+    --line-height-lg: 18px;
+    --line-height-xl: 19px;
+    --line-height-2xl: 20px;
+    --line-height-3xl: 21px;
+    --line-height-4xl: 22px;
+    --line-height-5xl: 23px;
+    --line-height-6xl: 26px;
+    --line-height-7xl: 28px;
+    --line-height-8xl: 43px;
+    --line-height-9xl: 46px;
+    --line-height-10xl: 48px;
+    --line-height-11xl: 51px;
+    --line-height-12xl: 56px;
+    --line-height-13xl: 65px;
+
+    /* Typography Variables - Letter Spacing */
+    --letter-spacing-tight: 1px;
+    --letter-spacing-wide: 3px;
+
+    /* Spacing Variables - Margin */
+    --margin-xs: 4px;
+    --margin-sm: 6px;
+    --margin-md: 8px;
+    --margin-lg: 10px;
+    --margin-xl: 12px;
+    --margin-2xl: 14px;
+    --margin-3xl: 16px;
+    --margin-4xl: 18px;
+    --margin-5xl: 20px;
+    --margin-6xl: 22px;
+    --margin-7xl: 24px;
+    --margin-8xl: 26px;
+    --margin-9xl: 42px;
+    --margin-10xl: 48px;
+    --margin-11xl: 50px;
+    --margin-12xl: 54px;
+    --margin-13xl: 78px;
+    --margin-14xl: 80px;
+    --margin-15xl: 136px;
+    --margin-16xl: 228px;
+
+    /* Spacing Variables - Padding */
+    --padding-xs: 4px;
+    --padding-sm: 6px;
+    --padding-md: 8px;
+    --padding-lg: 10px;
+    --padding-xl: 12px;
+    --padding-2xl: 16px;
+    --padding-3xl: 18px;
+    --padding-4xl: 20px;
+    --padding-5xl: 24px;
+    --padding-6xl: 28px;
+    --padding-7xl: 30px;
+    --padding-8xl: 32px;
+    --padding-9xl: 34px;
+    --padding-10xl: 36px;
+    --padding-11xl: 52px;
+    --padding-12xl: 54px;
+    --padding-13xl: 56px;
+    --padding-14xl: 64px;
+    --padding-15xl: 78px;
+    --padding-16xl: 80px;
+    --padding-17xl: 222px;
+    --padding-18xl: 410px;
+
+    /* Spacing Variables - Gap */
+    --gap-xs: 4px;
+    --gap-sm: 6px;
+    --gap-md: 8px;
+    --gap-lg: 10px;
+    --gap-xl: 12px;
+    --gap-2xl: 14px;
+    --gap-3xl: 16px;
+    --gap-4xl: 20px;
+    --gap-5xl: 22px;
+    --gap-6xl: 30px;
+    --gap-7xl: 32px;
+    --gap-8xl: 34px;
+    --gap-9xl: 38px;
+    --gap-10xl: 44px;
+    --gap-11xl: 48px;
+    --gap-12xl: 64px;
+
+    /* Border Radius Variables */
+    --radius-xs: 3px;
+    --radius-sm: 5px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 10px;
+    --radius-2xl: 12px;
+    --radius-3xl: 14px;
+
+    /* Border Width Variables */
+    --border-width-none: 0px;
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
+
+    /* Layout Variables - Width */
+    --width-xs: 6px;
+    --width-sm: 8px;
+    --width-md: 92px;
+    --width-lg: 114px;
+    --width-xl: 260px;
+    --width-2xl: 352px;
+    --width-3xl: 1830px;
+    --width-14: 14%;
+    --width-16: 16%;
+    --width-34: 34%;
+    --width-38: 38%;
+    --width-54: 54%;
+    --width-60: 60%;
+    --width-62: 62%;
+    --width-76: 76%;
+    --width-96: 96%;
+    --width-full: 100%;
+  }
+}

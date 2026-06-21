@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Primary Background Colors */
+  --primary-bg-dark: #0b0f14;
+  --primary-bg-navy: #0d1219;
+  --primary-bg-navy-alpha: #0d1219ea;
+  --primary-bg-blue-dark: #0d1a2e;
+
+  /* Secondary Background Colors */
+  --secondary-bg-blue: #185fa5;
+  --secondary-bg-teal: #1d9e75;
+  --secondary-bg-gray-alpha: #1e1e1eb2;
+  --secondary-bg-cyan: #1f73c2;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #7a9cc4;
+  --text-tertiary: #3a5a7a;
+  --text-muted: #2a4a6a;
+  --text-accent-teal: #1d9e75;
+  --text-accent-blue: #4a9eff;
+
+  /* Border Colors */
+  --border-primary: #1a2744;
+  --border-secondary: #1e3a5f;
+  --border-accent: #185fa5;
+  --border-light: #ffffff;
+
+  /* Component-Specific Colors */
+  --button-bg-primary: #185fa5;
+  --button-bg-secondary: #1f73c2;
+  --button-bg-tertiary: #0d1a2e;
+  --button-text-primary: #ffffff;
+  --button-text-secondary: #4a9eff;
+  --button-text-tertiary: #7a9cc4;
+  --button-text-muted: #3a5a7a;
+  --button-border-primary: #185fa5;
+  --button-border-secondary: #1a2744;
+  --button-border-tertiary: #1e3a5f;
+
+  --header-bg: #0d1219ea;
+
+  --footer-bg: #0d1219;
+  --footer-border: #1a2744;
+
+  --chip-bg: #0d1219;
+  --chip-text-primary: #7a9cc4;
+  --chip-text-secondary: #3a5a7a;
+  --chip-border: #1a2744;
+
+  --link-text: #3a5a7a;
+
+  --icon-button-bg: #0d1a2e;
+  --icon-button-border: #1e3a5f;
+
+  --list-border: #1a2744;
+}
+
+@theme inline {
+  --color-background: var(--primary-bg-navy);
+  --color-foreground: var(--text-primary);
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary-bg-navy);
+  color: var(--text-primary);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Smooth animations */
+@keyframes subtleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.btn-polish {
+  transition:
+    transform 130ms ease,
+    box-shadow 170ms ease,
+    background-color 170ms ease,
+    border-color 170ms ease;
+}
+
+.btn-polish:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(24, 95, 165, 0.3);
+}
+
+.btn-polish:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.card-polish {
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 200ms ease;
+}
+
+.card-polish:hover {
+  transform: translateY(-3px);
+}
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-bg-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2479ff, #1b4fd6);
+  border-radius: 999px;
+  border: 2px solid var(--primary-bg-navy);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3b8cff, #245cff);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2479ff var(--primary-bg-navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes shake-soft {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-5px, 3px); }
+  50% { transform: translate(4px, -3px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes shake-hard {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 6px); }
+  40% { transform: translate(8px, -6px); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake-soft { animation: shake-soft 120ms linear; }
+.shake { animation: shake 140ms linear; }
+.shake-hard { animation: shake-hard 160ms linear; }
