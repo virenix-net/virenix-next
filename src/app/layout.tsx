@@ -25,15 +25,6 @@ export const metadata: Metadata = {
     title: "Virenix - Fast Game Server Hosting",
     description: "Lightning-fast game server hosting built for performance. Join the waitlist today.",
     siteName: "Virenix",
-    images: [
-      {
-        url: "https://r2.fivemanage.com/MstMs66haaJ9Pm7JfZ7kO/icon_transparent_blue_512.png",
-        width: 512,
-        height: 512,
-        alt: "Virenix Logo",
-        type: "image/png",
-      },
-    ],
     locale: "en_US",
   },
 
